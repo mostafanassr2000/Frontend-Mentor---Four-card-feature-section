@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-txt {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+h1:nth-of-type(1) {
+    font-weight: 100;
+    opacity: 70%;
+}
+
+h1:nth-of-type(2) {
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+.header-txt>p {
+    max-width: 500px;
+    opacity: 70%;
+}
+
+.applications {
+    display: flex;
+    flex-direction: column;
+}
+
+.applications > div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 360px;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 50px rgb(216, 216, 216);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.app-img {
+    width: 60px;
+    margin: 1rem 0rem 2rem 16.5rem;
+}
+
+.app-header {
+    font-size: 25px;
+}
+
+.app-details {
+    width: 340px;
+}
+
+.app-header,
+.app-details {
+    padding: 0 0rem 0.5rem 2.5rem;
+    opacity: 80%;
+}
+
+.app-upperline {
+    margin-bottom: 1.5rem;
+    height: 5px;
+    background-color: black;
+    border: none;
+}
+
+.supervisor>hr {
+    background-color: var(--cyan);
+}
+
+.team-builder>hr {
+    background-color: var(--red);
+}
+
+.karma>hr {
+    background-color: var(--orange);
+}
+
+.calculator>hr {
+    background-color: var(--blue);
+}
+
+
+@media screen and (min-width: 1200px) {
+    header{
+        -webkit-transform: scale(0.9);
+    }
+    .applications {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 2rem;
+        -webkit-transform: scale(0.9);
+        margin-top: -5rem;
+    }
+
+    .supervisor,
+    .calculator {
+        transform: translateY(8rem);
+    }
+
+    .calculator {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    .karma {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+}
